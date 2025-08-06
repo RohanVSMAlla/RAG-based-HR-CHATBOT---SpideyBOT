@@ -1,43 +1,7 @@
-# For OpenAI API access
-openai>=1.2.0
 
-# For LangChain (core RAG logic)
-langchain>=0.1.13
-langchain-openai>=0.1.6
-langchain-community>=0.0.21
-langchain-chroma>=0.1.1
-
-# For vector store (ChromaDB)
-chromadb>=0.4.22
-
-# For PDF loading
-pypdf>=3.10.0
-
-# Token counting for OpenAI (used internally by LangChain)
-tiktoken>=0.5.1
-
-# Environment variables loader
-python-dotenv>=1.0.1
-
-# UI framework
-streamlit>=1.33.0
-
-
-------------------------------------------------------------------------------------------------------------------
-
-WANT MORE CLARITY ON "WHY?"; HERE YOU GO!
-
-
-
-| Package               | Why it's needed                                                             |
-| --------------------- | --------------------------------------------------------------------------- |
-| `openai`              | Direct OpenAI client (used to authenticate with `project_id` and API key)   |
-| `langchain`           | Framework to build the whole RAG pipeline (`RetrievalQA`, `PromptTemplate`) |
-| `langchain-openai`    | OpenAI wrapper used in `ChatOpenAI()` and `OpenAIEmbeddings()`              |
-| `langchain-community` | PDFLoader, other community tools (like `PyPDFLoader`)                       |
-| `langchain-chroma`    | To use `Chroma` as the vector DB                                            |
-| `chromadb`            | The actual ChromaDB backend (needed for storing and retrieving embeddings)  |
-| `pypdf`               | PDF parser that loads document into LangChain pipeline                      |
-| `tiktoken`            | OpenAI tokenizer — needed to chunk text by token count using `TextSplitter` |
-| `python-dotenv`       | Used to securely load `.env` file containing your `OPENAI_API_KEY`          |
-| `streamlit`           | Web UI where user chats with the bot                                        |
+streamlit
+langchain
+openai
+chromadb
+python-dotenv
+tiktoken
