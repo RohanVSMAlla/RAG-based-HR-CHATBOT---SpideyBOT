@@ -1,0 +1,26 @@
+# Python bytecode/cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+.env
+
+# VS Code or IDE settings
+.vscode/
+.idea/
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Chroma DB local persistence
+chroma_db/
+
+# Streamlit config
+.streamlit/
+
+# Anything else personal
+*.log
